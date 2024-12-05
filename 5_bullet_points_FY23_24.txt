@@ -1,0 +1,6 @@
+
+1. Delivered key project milestones, enhanced software quality and worked on defect fixes, user stories within deadlines through effective teamwork and strategic planning.
+2. Attended internal and external trainings on python, CCAI Bootcamp to enhance my skills to move next level in career.
+3. Secured P3+ proficiency in primary skill, added additional skills in secondary skills and gained P2 proficiency. Successfully completed all mandatory trainings such as ethics and compliance, TQ training, and Mycompetency skills.
+4. Explored and worked in the development of proof-of-concept for Angular chatbot response streaming using websocket connection and worked in Dialogflow CX, GCP for connecting agents with cloud functions, webhooks.
+5. Involved in GENAI proof of concept and attended Hackathon on the same.

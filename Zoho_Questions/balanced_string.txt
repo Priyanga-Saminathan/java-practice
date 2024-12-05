@@ -1,0 +1,24 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        Scanner sc=new Scanner(System.in);
+        String str="RLRRLLRLRLrl";
+        int lc=0;
+        int rc=0;
+        int res=0;
+        char s[]=str.toCharArray();
+        for(int i=0;i<str.length();i++){
+            if(s[i]=='R' || s[i]=='r'){
+                rc++;
+            }
+            else{
+                lc++;
+            }
+            if(rc==lc){
+                res++;
+            }
+        }
+        System.out.println(res);
+    }
+}

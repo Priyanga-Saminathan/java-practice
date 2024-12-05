@@ -1,0 +1,81 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        Scanner sc=new Scanner(System.in);
+        String str1=sc.nextLine();
+        String str2=sc.nextLine();
+        char arr1[]=str1.toCharArray();
+        char arr2[]=str2.toCharArray();
+        int l1=str1.length();
+        int l2=str2.length();
+        String str3[]=new String[10];
+        String str4[]=new String[10];
+        String temp="";
+        int k1=0,k2=0;
+        boolean flag=false;
+        for(int i=0;i<l1;i++){
+            if(arr1[i]!='.'){
+                temp=temp+arr1[i];
+                flag=false;
+            }
+            else{
+                flag=true;
+            }
+            if(flag||i==(l1-1)){
+                str3[k1++]=temp;
+                temp="";
+            }
+        }
+        for(int i=0;i<k1;i++){
+            System.out.println(str3[i]);
+        }
+        flag=false;
+        for(int i=0;i<l2;i++){
+            if(arr2[i]!='.'){
+                temp=temp+arr2[i];
+                flag=false;
+            }
+            else{
+                flag=true;
+            }
+            if(flag||i==(l2-1)){
+                str4[k2++]=temp;
+                temp="";
+            }
+        }
+        for(int i=0;i<k2;i++){
+            System.out.println(str4[i]);
+        }
+        int len=0;
+        if(l1>l2){
+            len=l2;
+        }
+        else{
+            len=l1;
+        }
+        for(int i=0;i<len;i++){
+            int n1=Integer.parseInt(str3[i]);
+            int n2=Integer.parseInt(str4[i]);
+            if(n1>n2){
+                System.out.println("Downgraded");
+                return;
+            }
+            else if(n1<n2){
+                System.out.println("Upgraded");
+                return;
+            }
+            else if(n1==n2){
+                if(i==(len-1)){
+                    System.out.println("Equal");
+                    return;
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+    }
+}

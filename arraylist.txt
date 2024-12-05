@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner in=new Scanner(System.in);
+    int n=in.nextInt();
+    ArrayList<ArrayList<Integer>> list=new ArrayList<>(n);
+    while(n>0){
+        int v=in.nextInt();
+        ArrayList<Integer> inner=new ArrayList<>(v);
+        while(v>0){
+        inner.add(in.nextInt());
+        v--;
+        }
+        list.add(inner);
+    }
+    int s=in.nextInt();
+    while(s>0){
+        int x=in.nextInt();
+        int y=in.nextInt();
+        if(x>0 && y>0 && x<=n){
+            ArrayList<Integer> select=list.get(x-1);
+            if(y<=select.size()){
+                System.out.println(select.get(y-1));
+            }
+            else{
+                System.out.println("ERROR!");
+            }
+        }
+        else{
+            System.out.println("ERROR!");
+        }
+    }
+    }
+}
